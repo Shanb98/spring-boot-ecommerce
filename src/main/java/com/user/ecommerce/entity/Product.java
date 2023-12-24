@@ -8,8 +8,9 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.math.BigDecimal;
 import java.util.Date;
 
+
 @Entity
-@Table(name = "product")  //db table name
+@Table(name="product")
 @Data
 public class Product {
 
@@ -44,11 +45,10 @@ public class Product {
     private int unitsInStock;
 
     @Column(name = "date_created")
-    @CreationTimestamp     //sets the field value to the current timestamp when the entity is first saved
+    @CreationTimestamp
     private Date dateCreated;
 
     @Column(name = "last_updated")
-    @UpdateTimestamp        //automatically sets the field value to the current timestamp
+    @UpdateTimestamp
     private Date lastUpdated;
-
 }
